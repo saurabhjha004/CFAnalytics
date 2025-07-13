@@ -47,12 +47,11 @@ const Index = () => {
   const enabledWidgets = dashboardWidgets.filter(w => w.enabled).sort((a, b) => a.order - b.order);
 
   const stats = userData?.userInfo ? {
-    solvedProblems: userData.submissions.filter((s: any) => s.verdict === 'OK').length,
-    maxRating: userData.userInfo.maxRating || 0,
-    contestsParticipated: userData.contests.length,
-    averageAttempts: userData.submissions.length > 0 ? 
-      parseFloat((userData.submissions.length / userData.submissions.filter((s: any) => s.verdict === 'OK').length || 1).toFixed(1)) : 0
-  } : { solvedProblems: 0, maxRating: 0, contestsParticipated: 0, averageAttempts: 0 };
+  solvedProblems: getUniqueSolvedProblems(userData.submissions),
+  maxRating: userData.userInfo.maxRating || 0,
+  contestsParticipated: userData.contests.length,
+  averageAttempts: getAverageAttempts(userData.submissions)
+} : { solvedProblems: 0, maxRating: 0, contestsParticipated: 0, averageAttempts: 0 };
 
   if (showDashboard && searchHandle) {
     if (isLoading) {
