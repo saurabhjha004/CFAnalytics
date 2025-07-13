@@ -77,7 +77,7 @@ export const codeforcesApi = {
     return data.result[0];
   },
 
-  async getUserSubmissions(handle: string, count: number = 100): Promise<CodeforcesSubmission[]> {
+  async getUserSubmissions(handle: string, count: number = 10000): Promise<CodeforcesSubmission[]> {
     const response = await fetch(`https://codeforces.com/api/user.status?handle=${handle}&from=1&count=${count}`);
     const data = await response.json();
     
