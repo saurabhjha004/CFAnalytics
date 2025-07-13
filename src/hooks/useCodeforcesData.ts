@@ -14,7 +14,7 @@ export const useCodeforcesData = (handle: string) => {
 
   const submissionsQuery = useQuery({
     queryKey: ['submissions', handle],
-    queryFn: () => codeforcesApi.getUserSubmissions(handle, 500),
+    queryFn: () => codeforcesApi.getUserSubmissions(handle, 10000),
     enabled: !!handle,
     staleTime: 2 * 60 * 1000, // 2 minutes
     gcTime: 10 * 60 * 1000,
