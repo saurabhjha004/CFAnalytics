@@ -15,6 +15,7 @@ import { getRankColor } from '@/services/codeforcesApi';
 import { motion } from 'framer-motion';
 import { ExportData } from '@/components/ExportData';
 import { UserComparison } from '@/components/UserComparison';
+import { getUniqueSolvedProblems, getAverageAttempts } from '@/lib/utils';
 
 
 const Index = () => {
