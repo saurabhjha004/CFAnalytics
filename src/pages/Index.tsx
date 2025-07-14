@@ -125,7 +125,7 @@ const Index = () => {
                 >
                   ← Back to Search
                 </Button>
-                <h1 className="text-xl font-bold">CFAnalytics</h1>
+                <h1 className="text-xl font-bold">CFAnalytix</h1>
               </div>
               
               <div className="flex items-center space-x-3">
@@ -255,7 +255,7 @@ const Index = () => {
       <nav className="bg-white/80 backdrop-blur-sm border-b dark:bg-gray-900/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <h1 className="text-2xl font-bold text-primary">CFAnalytics</h1>
+            <h1 className="text-2xl font-bold text-primary">CFAnalytix</h1>
             <ThemeToggle />
           </div>
         </div>
@@ -270,7 +270,7 @@ const Index = () => {
           >
             <TrendingUp className="h-16 w-16 text-primary mx-auto mb-6" />
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              CFAnalytics
+              CFAnalytix
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               Advanced Codeforces analytics with PDF export, user comparison, and activity heatmaps.
