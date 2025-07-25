@@ -7,6 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import { useCodeforcesData } from '@/hooks/useCodeforcesData';
 import { getRankColor } from '@/services/codeforcesApi';
 import { useToast } from '@/hooks/use-toast';
+import { getUniqueSolvedProblems, getAverageAttempts } from '@/lib/utils';
 
 interface UserComparisonProps {
   currentUser: any;
@@ -44,11 +45,10 @@ export const UserComparison: React.FC<UserComparisonProps> = ({ currentUser }) =
       const userStats = {
         ...compareData,
         stats: {
-          solvedProblems: compareData.submissions.filter((s: any) => s.verdict === 'OK').length,
+          solvedProblems: getUniqueSolvedProblems(compareData.submissions),
           maxRating: compareData.userInfo.maxRating || 0,
           contestsParticipated: compareData.contests.length,
-          averageAttempts: compareData.submissions.length > 0 ? 
-            parseFloat((compareData.submissions.length / compareData.submissions.filter((s: any) => s.verdict === 'OK').length || 1).toFixed(1)) : 0
+          averageAttempts: getAverageAttempts(compareData.submissions)
         }
       };
       
@@ -67,12 +67,11 @@ export const UserComparison: React.FC<UserComparisonProps> = ({ currentUser }) =
   };
 
   const currentStats = {
-    solvedProblems: currentUser.submissions.filter((s: any) => s.verdict === 'OK').length,
-    maxRating: currentUser.userInfo.maxRating || 0,
-    contestsParticipated: currentUser.contests.length,
-    averageAttempts: currentUser.submissions.length > 0 ? 
-      parseFloat((currentUser.submissions.length / currentUser.submissions.filter((s: any) => s.verdict === 'OK').length || 1).toFixed(1)) : 0
-  };
+  solvedProblems: getUniqueSolvedProblems(currentUser.submissions),
+  maxRating: currentUser.userInfo.maxRating || 0,
+  contestsParticipated: currentUser.contests.length,
+  averageAttempts: getAverageAttempts(currentUser.submissions)
+};
 
   const getComparisonIcon = (current: number, other: number) => {
     if (current > other) return <TrendingUp className="h-4 w-4 text-green-500" />;
