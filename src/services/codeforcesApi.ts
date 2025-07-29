@@ -1,4 +1,3 @@
-
 interface CodeforcesUser {
   handle: string;
   email?: string;
@@ -77,8 +76,9 @@ export const codeforcesApi = {
     return data.result[0];
   },
 
-  async getUserSubmissions(handle: string, count: number = 100): Promise<CodeforcesSubmission[]> {
-    const response = await fetch(`https://codeforces.com/api/user.status?handle=${handle}&from=1&count=${count}`);
+  async getUserSubmissions(handle: string): Promise<CodeforcesSubmission[]> {
+    // FIX APPLIED: The 'count' is now set to a very large number to fetch all submissions.
+    const response = await fetch(`https://codeforces.com/api/user.status?handle=${handle}&from=1&count=100000`);
     const data = await response.json();
     
     if (data.status !== 'OK') {
