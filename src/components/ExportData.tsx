@@ -139,7 +139,7 @@ export const ExportData: React.FC<ExportDataProps> = ({ userData, stats }) => {
       // Footer
       pdf.setFontSize(8);
       pdf.setTextColor(128, 128, 128);
-      pdf.text(`Generated on ${new Date().toLocaleDateString()} by CFAnalytics`, 
+      pdf.text(`Generated on ${new Date().toLocaleDateString()} by CFAnalytix`, 
                pageWidth / 2, pageHeight - 10, { align: 'center' });
       
       pdf.save(`${userData.userInfo.handle}-codeforces-report.pdf`);
