@@ -37,7 +37,7 @@ const Index = () => {
 
   const { data: userData, isLoading, error, refetch } = useCodeforcesData(searchHandle);
 
-  const handleSearch = async () => {
+  const handleSearch = () => {
     if (!handle.trim()) return;
     setSearchHandle(handle);
     setShowDashboard(true);
@@ -255,18 +255,9 @@ const Index = () => {
             onClose={() => setShowCustomizer(false)}
             />
         </MainContent>
-        {/* --- FIX APPLIED HERE --- */}
         <footer className="fixed bottom-0 left-0 w-full py-4 bg-background/80 backdrop-blur-sm border-t border-black/10 dark:border-white/10 z-50">
             <p className="text-center text-sm text-muted-foreground">
-                Made with ❤️ by Saurabh Jha |{' '}
-                <a
-                    href="https://github.com/saurabhjha004/CFAnalytics"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline hover:text-primary"
-                >
-                    GitHub
-                </a>
+                Made with ❤️ by Saurabh Jha
             </p>
         </footer>
       </div>
@@ -308,27 +299,28 @@ const Index = () => {
                     >
                     <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl border max-w-md mx-auto dark:bg-gray-900/80">
                         <h2 className="text-xl font-semibold mb-4">Enter Your Codeforces Handle</h2>
-                        <div className="space-y-4">
-                        <div className="relative">
-                            <Search className="absolute left-3 top-3 h-5 w-5 text-muted-foreground" />
-                            <input
-                            type="text"
-                            placeholder="your_handle"
-                            className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-800 dark:border-gray-600"
-                            value={handle}
-                            onChange={(e) => setHandle(e.target.value)}
-                            onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
-                            />
-                        </div>
-                        
-                        <Button 
-                            onClick={handleSearch}
-                            disabled={!handle.trim()}
-                            className="w-full py-3 text-lg"
-                        >
-                            Analyze Performance
-                        </Button>
-                        </div>
+                        {/* --- FIX APPLIED HERE: Using a form for robust submission handling --- */}
+                        <form onSubmit={(e) => { e.preventDefault(); handleSearch(); }} className="space-y-4">
+                            <div className="relative">
+                                <Search className="absolute left-3 top-3 h-5 w-5 text-muted-foreground" />
+                                <input
+                                type="text"
+                                placeholder="your_handle"
+                                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-800 dark:border-gray-600"
+                                value={handle}
+                                onChange={(e) => setHandle(e.target.value)}
+                                // onKeyPress removed to prevent potential double submission issues
+                                />
+                            </div>
+                            
+                            <Button 
+                                type="submit" // Changed to type="submit"
+                                disabled={!handle.trim()}
+                                className="w-full py-3 text-lg"
+                            >
+                                Analyze Performance
+                            </Button>
+                        </form>
                     </div>
                     </motion.div>
 
@@ -366,18 +358,10 @@ const Index = () => {
                 </div>
             </div>
         </MainContent>
-        {/* --- FIX APPLIED HERE --- */}
+        {/* --- FIX APPLIED HERE: GitHub link removed --- */}
         <footer className="fixed bottom-0 left-0 w-full py-4 bg-background/80 backdrop-blur-sm border-t border-black/10 dark:border-white/10 z-50">
             <p className="text-center text-sm text-muted-foreground">
-                Made with ❤️ by Saurabh Jha |{' '}
-                <a
-                    href="https://github.com/saurabhjha004/CFAnalytics"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline hover:text-primary"
-                >
-                    GitHub
-                </a>
+                Made with ❤️ by Saurabh Jha
             </p>
         </footer>
     </div>
