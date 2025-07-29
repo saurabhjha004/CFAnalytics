@@ -230,7 +230,6 @@ npm run lint
 npm run build
 ```
 
-For detailed contributing guidelines, please see our [Contributing Guidelines](CONTRIBUTING.md).
 
 ## 📊 Analytics Accuracy
 
@@ -266,7 +265,7 @@ This project is licensed under the MIT License.
 
 **Saurabh Jha**
 
-- GitHub: [@saurabhjha004](https://github.com/saurabhjha004)
+- GitHub: [saurabhjha004](https://github.com/saurabhjha004)
 - LinkedIn: [saurabhjha04](https://linkedin.com/in/saurabhjha04)
 - Codeforces: [saurabhjha04](https://codeforces.com/profile/saurabhjha04)
 
