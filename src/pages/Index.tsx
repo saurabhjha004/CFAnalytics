@@ -20,7 +20,15 @@ const Footer = () => {
   return (
     <footer className="fixed bottom-0 w-full text-center p-3 bg-white/80 backdrop-blur-sm dark:bg-gray-900/80 border-t">
       <p className="text-sm text-muted-foreground">
-        Made with ❤️ by Saurabh Jha
+        Made with ❤️ by Saurabh Jha |{' '}
+                    <a
+                        href="https://github.com/saurabhjha004/CFAnalytics"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline hover:text-primary"
+                    >
+                        GitHub
+                    </a>
       </p>
     </footer>
   );
