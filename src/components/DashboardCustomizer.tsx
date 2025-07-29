@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Settings, Eye, EyeOff, GripVertical } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -68,7 +67,8 @@ export const DashboardCustomizer: React.FC<DashboardCustomizerProps> = ({
             Choose which widgets to display and arrange their order on your dashboard.
           </p>
 
-          <div className="space-y-3">
+          {/* FIX APPLIED HERE: Added max-h-[60vh] to limit height and overflow-y-auto to enable scrolling */}
+          <div className="space-y-3 max-h-[60vh] overflow-y-auto pr-4">
             {localWidgets.map((widget, index) => (
               <div
                 key={widget.id}
