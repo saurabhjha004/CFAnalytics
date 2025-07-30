@@ -212,23 +212,6 @@ We welcome contributions from the community! Whether you're fixing bugs, adding 
 - 📚 **Documentation**: Improve README, add code comments, or create guides
 - 🎨 **UI/UX**: Enhance the user interface and experience
 - ⚡ **Performance**: Optimize code for better performance
-- 🧪 **Testing**: Add tests to improve code coverage
-
-### Development Setup
-
-```bash
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-
-# Run linting
-npm run lint
-
-# Build for production
-npm run build
-```
 
 
 ## 📊 Analytics Accuracy
@@ -244,11 +227,8 @@ npm run build
 ## 📈 Roadmap
 
 - [ ] Contest Calendar Integration
-- [ ] Team/Organization Analytics
 - [ ] Problem Recommendation Engine
 - [ ] Social Features & Leaderboards
-- [ ] Mobile App Development
-- [ ] More Platform Integrations (AtCoder, CodeChef, etc.)
 
 ## 📄 License
 
