@@ -191,14 +191,6 @@ This project is licensed under the MIT License.
 - [Recharts](https://recharts.org) for powerful data visualization
 - The competitive programming community for inspiration and feedback
 
-## 👨‍💻 Author
-
-**Saurabh Jha**
-
-- GitHub: [saurabhjha004](https://github.com/saurabhjha004)
-- LinkedIn: [saurabhjha04](https://linkedin.com/in/saurabhjha04)
-- Codeforces: [saurabhjha04](https://codeforces.com/profile/saurabhjha04)
-
 ---
 
 <div align="center">
