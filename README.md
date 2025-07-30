@@ -170,50 +170,6 @@ cfanalytix/
 - **GitHub Pages**: Use `gh-pages` for static deployment
 - **Docker**: Containerize with the included Dockerfile
 
-## 🤝 Contributing
-
-We welcome contributions from the community! Whether you're fixing bugs, adding new features, improving documentation, or suggesting enhancements, your help is appreciated.
-
-### How to Contribute
-
-1. **Fork the repository** to your GitHub account
-2. **Clone your fork** locally:
-   ```bash
-   git clone https://github.com/saurabhjha004/cfanalytix.git
-   cd cfanalytix
-   ```
-3. **Create a feature branch** from `main`:
-   ```bash
-   git checkout -b feature/amazing-feature
-   ```
-4. **Make your changes** and test thoroughly
-5. **Commit your changes** with descriptive messages:
-   ```bash
-   git commit -m 'Add: amazing new feature for better analytics'
-   ```
-6. **Push to your branch**:
-   ```bash
-   git push origin feature/amazing-feature
-   ```
-7. **Open a Pull Request** with a clear description of your changes
-
-### Contribution Guidelines
-
-- **Code Style**: Follow the existing code style and use Prettier/ESLint
-- **Testing**: Ensure your changes don't break existing functionality
-- **Documentation**: Update documentation for any new features
-- **Commit Messages**: Use clear, descriptive commit messages
-- **Issue First**: For major changes, open an issue first to discuss
-
-### Types of Contributions Welcome
-
-- 🐛 **Bug Fixes**: Fix existing issues or report new ones
-- ✨ **New Features**: Add new analytics features or improvements
-- 📚 **Documentation**: Improve README, add code comments, or create guides
-- 🎨 **UI/UX**: Enhance the user interface and experience
-- ⚡ **Performance**: Optimize code for better performance
-
-
 ## 📊 Analytics Accuracy
 
 > **Note**: Problem counts are calculated from Codeforces API submissions and may differ slightly from profile page numbers due to API limitations. Our algorithm ensures accurate unique problem counting by eliminating duplicate submissions.
@@ -223,12 +179,6 @@ We welcome contributions from the community! Whether you're fixing bugs, adding 
 - Minor discrepancies between API data and profile page statistics
 - Rate limiting may occur with frequent API requests
 - Some contest data may have slight delays
-
-## 📈 Roadmap
-
-- [ ] Contest Calendar Integration
-- [ ] Problem Recommendation Engine
-- [ ] Social Features & Leaderboards
 
 ## 📄 License
 
