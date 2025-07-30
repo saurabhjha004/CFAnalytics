@@ -22,7 +22,7 @@ const Footer = () => {
       <p className="text-sm text-muted-foreground">
         Made with ❤️ by Saurabh Jha |{' '}
                     <a
-                        href="https://github.com/saurabhjha004/CFAnalytics"
+                        href="https://github.com/saurabhjha004/CFAnalytix"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="underline hover:text-primary"
